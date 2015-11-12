@@ -1,0 +1,36 @@
+@import '../common/bourbon/bourbon';
+@import '../common/neat/neat';
+@import '../libs/typography';
+
+.recipe{
+	@include outer-container(600px);
+	&-row{
+		padding: 20px;
+		@include outer-container(50%);
+		&-inputField{
+			padding: 10px;
+			border: solid 1px #dcdcdc;
+			transition: box-shadow 0.3s, border 0.3s;
+			@include span-columns(12);
+			&:focus{
+				border: 1px solid green;
+  				box-shadow: 0 0 5px 1px #969696;
+			}
+			&.is-select{
+				background: transparent;
+   				
+				   padding: 5px;
+				   font-size: 16px;
+				   line-height: 1;
+				   border: 0;
+				   border-radius: 0;
+				   height: 34px;
+				   -webkit-appearance: none;
+			}
+		}
+	}
+	&-button{
+		@include span-columns(4);
+		@include shift(4);
+	}
+}

@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Allan);
+@import url(https://fonts.googleapis.com/css?family=Rouge+Script);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Allan);
+@import url(https://fonts.googleapis.com/css?family=Rouge+Script);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.recipe {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+  .recipe::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .recipe-row {
+    padding: 20px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+    .recipe-row::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .recipe-row-inputField {
+      padding: 10px;
+      border: solid 1px #dcdcdc;
+      transition: box-shadow 0.3s, border 0.3s;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .recipe-row-inputField:last-child {
+        margin-right: 0; }
+      .recipe-row-inputField:focus {
+        border: 1px solid green;
+        box-shadow: 0 0 5px 1px #969696; }
+      .recipe-row-inputField.is-select {
+        background: transparent;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none; }
+  .recipe-button {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    .recipe-button:last-child {
+      margin-right: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+header {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  text-align: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 16px;
+    color: white;
+    background-color: blue;
+    cursor: pointer; }
+
+/*# sourceMappingURL=general.css.map */

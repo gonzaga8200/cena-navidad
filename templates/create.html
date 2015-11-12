@@ -1,0 +1,47 @@
+<div class='recipe' >
+
+         <ul>
+            <li ng-repeat="message in data">{{ message.dish }}</li>
+         </ul>
+
+         <form ng-submit="addRecipe()">
+            	<div class="recipe-row">
+            		<input placeholder="Introduce tu nombre" class="recipe-row-inputField" ng-model="name" />
+            	</div>
+            	<div class="recipe-row">
+            		<input placeholder="Introduce el nombre del plato" class="recipe-row-inputField" ng-model="dish"  />
+            	</div>
+            	<div class="recipe-row">
+            		<select class="recipe-row-inputField" ng-model="type" >
+                     <option value="">-- Selecciona la categoria de tu plato --</option>
+                     <option value="Carne">Carne</option>
+                     <option value="Pescado">Pescado</option>
+                     <option value="Cuchara">Cuchara</option>
+                     <option value="Postre">Postre</option>
+                     <option value="Entrante">Entrante</option>
+                     <option value="Entrante">Dulce</option>
+                  </select>
+
+
+            	</div>
+            	<div class="recipe-row">
+            		<select class="recipe-row-inputField" ng-model="class" >
+                     <option value="">-- Selecciona el momento --</option>
+                     <option value="Desayuno">Desayuno</option>
+                     <option value="Comida">Comida</option>
+                     <option value="Cena">Cena</option>
+                  </select>
+            	</div>
+            	<div class="recipe-row">
+            		<select class="recipe-row-inputField"  ng-model="date" ng-init="date = options[0]"> 
+                     <option value="">-- Selecciona la fecha --</option>
+                     <option value="24">24 de Diciembre</option>
+                     <option value="25">25 de Diciembre</option>
+                     <option value="26">26 de Diciembre</option>
+                  </select>
+            	</div>
+            	<button class="recipe-button" type="submit">
+            		Enviar
+            	</button>
+         </form>
+      </div>

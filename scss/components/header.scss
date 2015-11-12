@@ -1,0 +1,21 @@
+@import '../common/bourbon/bourbon';
+@import '../common/neat/neat';
+@import '../libs/typography';
+
+header{
+	font-family: 'Arvo', serif;
+	font-size:20px;
+	text-align:center;
+	@include outer-container(960px);
+	ul{
+		li{
+
+			display: inline;
+			list-style-type: none;
+			padding: 16px;
+			color: white;
+			background-color: blue;
+			cursor:pointer;
+		}
+	}
+}
