@@ -10,8 +10,29 @@
 		</li>
 	</ul>
 	<h2 class="title-list">COMIDA</h2>
+	<h3 class="title-order">Primeros / Entrantes</h3>
 	<ul>
-		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.class=='C'">
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 1 && item.class == 'C'">
+			<span class="container-list-dish">{{ item.dish }}</span>
+			<span class="container-list-text">cortesía de </span>
+			<span class="container-list-dish">{{ item.name }}</span>
+			<span class="container-list-text">Tipo de Plato</span>
+			<span class="container-list-dish">{{ item.type }}</span>
+		</li>
+	</ul>
+	<h3 class="title-order">Segundos</h3>
+	<ul>
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 2 && item.class == 'C'">
+			<span class="container-list-dish">{{ item.dish }}</span>
+			<span class="container-list-text">cortesía de </span>
+			<span class="container-list-dish">{{ item.name }}</span>
+			<span class="container-list-text">Tipo de Plato</span>
+			<span class="container-list-dish">{{ item.type }}</span>
+		</li>
+	</ul>
+	<h3 class="title-order">Postres</h3>
+	<ul>
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 3 && item.class == 'C'">
 			<span class="container-list-dish">{{ item.dish }}</span>
 			<span class="container-list-text">cortesía de </span>
 			<span class="container-list-dish">{{ item.name }}</span>
@@ -20,8 +41,29 @@
 		</li>
 	</ul>
 	<h2 class="title-list">CENA</h2>
+	<h3 class="title-order">Primeros / Entrantes</h3>
 	<ul>
-		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.class=='S'">
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 1 && item.class == 'S'">
+			<span class="container-list-dish">{{ item.dish }}</span>
+			<span class="container-list-text">cortesía de </span>
+			<span class="container-list-dish">{{ item.name }}</span>
+			<span class="container-list-text">Tipo de Plato</span>
+			<span class="container-list-dish">{{ item.type }}</span>
+		</li>
+	</ul>
+	<h3 class="title-order">Segundos</h3>
+	<ul>
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 2 && item.class == 'S'">
+			<span class="container-list-dish">{{ item.dish }}</span>
+			<span class="container-list-text">cortesía de </span>
+			<span class="container-list-dish">{{ item.name }}</span>
+			<span class="container-list-text">Tipo de Plato</span>
+			<span class="container-list-dish">{{ item.type }}</span>
+		</li>
+	</ul>
+	<h3 class="title-order">Postres</h3>
+	<ul>
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==25 && item.order == 3 && item.class == 'S'">
 			<span class="container-list-dish">{{ item.dish }}</span>
 			<span class="container-list-text">cortesía de </span>
 			<span class="container-list-dish">{{ item.name }}</span>

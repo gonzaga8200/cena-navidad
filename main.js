@@ -50,6 +50,7 @@ app.controller('RecipeController',function($scope, $firebaseArray, toaster){
   $scope.addRecipe = function() {
     $scope.data.$add({
       dish: $scope.dish,
+      order: $scope.order,
       name: $scope.name,
       type: $scope.type,
       class: $scope.class,
@@ -62,6 +63,7 @@ app.controller('RecipeController',function($scope, $firebaseArray, toaster){
     $scope.type= null; 
     $scope.class = null;
     $scope.date = null; 
+    $scope.order = null;
   };
 
 	//console.log($scope.data);

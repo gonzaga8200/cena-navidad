@@ -8,13 +8,22 @@
             	<div class="recipe-row">
             		<input placeholder="Introduce el nombre del plato" class="recipe-row-inputField" ng-model="dish" required  />
             	</div>
+               <div class="recipe-row">
+                  <select class="recipe-row-inputField" ng-model="order" required >
+                     <option value="">-- Selecciona el lugar en la comida --</option>
+                     <option value="1">Primeros / Entrantes</option>
+                     <option value="2">Segundos</option>
+                     <option value="3">Postres</option>
+                  </select>
+
+
+               </div>
             	<div class="recipe-row">
             		<select class="recipe-row-inputField" ng-model="type" required >
-                     <option value="">-- Selecciona la categoria de tu plato --</option>
+                     <option value="">-- Selecciona el tipo de tu plato --</option>
                      <option value="Carne">Carne</option>
                      <option value="Pescado">Pescado</option>
                      <option value="Cuchara">Cuchara</option>
-                     <option value="Postre">Postre</option>
                      <option value="Pasta">Pasta</option>
                      <option value="Entrante">Entrante</option>
                      <option value="Dulce">Dulce</option>
