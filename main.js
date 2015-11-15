@@ -1,4 +1,4 @@
-var app = angular.module("cena", ["firebase","ui.router"]);
+var app = angular.module("cena", ["firebase","ui.router","toaster"]);
 
 app.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
@@ -42,7 +42,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 })
 
 
-app.controller('RecipeController',function($scope, $firebaseArray){
+app.controller('RecipeController',function($scope, $firebaseArray, toaster){
 	var ref = new Firebase("https://cena-navidad.firebaseio.com");
   // download the data into a local object
   $scope.data = $firebaseArray(ref);
@@ -55,7 +55,14 @@ app.controller('RecipeController',function($scope, $firebaseArray){
       class: $scope.class,
       date: $scope.date
     });
+
+    toaster.pop('success', "Plato generado con Exito", "Gracias "+$scope.name);
+    $scope.dish = null; 
+    $scope.name = null;
+    $scope.type= null; 
+    $scope.class = null;
+    $scope.date = null; 
   };
 
-	console.log($scope.data);
+	//console.log($scope.data);
 });

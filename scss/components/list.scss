@@ -1,0 +1,31 @@
+@import '../common/bourbon/bourbon';
+@import '../common/neat/neat';
+@import '../libs/typography';
+
+.title-list{
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 18px;
+	color: blue;
+	text-align:center;
+}
+
+.container{
+	@include outer-container(630px);
+	font-family: 'Mountains of Christmas', cursive;
+}
+
+.container-list{
+	text-align:center;
+	list-style-type:none;
+	font-size: 22px;
+	padding: 10px;
+	&-dish{
+		color: black;
+		font-weight: 800;
+		text-transform: capitalize;
+	}
+	&-text{
+		color: black;
+		font-size:14px;
+	}
+}

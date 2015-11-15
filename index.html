@@ -5,14 +5,15 @@
       <TITLE>Cena de Navidad</TITLE>
 
       <link rel="stylesheet" type="text/css" href="libs/css/general.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.16/toaster.min.css" rel="stylesheet" />
    </HEAD>
    <BODY>
       <header>
          <ul>
-            <li ui-sref-active="active"><a ui-sref="create">Introducir Plato</a></li>
-            <li ui-sref-active="active"><a ui-sref="list_24">Menu Nochebuena</a></li>
-            <li ui-sref-active="active"><a ui-sref="list_25">Menu Navidad</a></li>
-            <li ui-sref-active="active"><a ui-sref="list_26">Menu 26 Diciembre</a></li>
+            <li ui-sref-active="active" class="pikichi"><a ui-sref="create">Introducir Plato</a></li>
+            <li ui-sref-active="active" class="pikichi"><a ui-sref="list_24">Menu Nochebuena</a></li>
+            <li ui-sref-active="active"  class="pikichi"><a ui-sref="list_25">Menu Navidad</a></li>
+            <li ui-sref-active="active" class="pikichi"><a ui-sref="list_26">Menu 26 Diciembre</a></li>
          </ul>
       </header>
 
@@ -28,6 +29,8 @@
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-      <script src="main.js" ></script >
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.16/toaster.min.js"></script>
+<script src="main.js" ></script >
    </BODY>
 </HTML>

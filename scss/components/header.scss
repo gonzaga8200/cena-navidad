@@ -1,21 +1,35 @@
 @import '../common/bourbon/bourbon';
 @import '../common/neat/neat';
 @import '../libs/typography';
+@import '../libs/helpers.scss';
 
 header{
-	font-family: 'Arvo', serif;
+	font-family: 'Mountains of Christmas', cursive;
 	font-size:20px;
-	text-align:center;
-	@include outer-container(960px);
+	@include outer-container(630px);
 	ul{
+		list-style-type: none;
+	    text-align: center;
+	    margin: 0 auto;
+	    padding: 0px;
+	    /* border: 1px solid red; */
+	    display: table;
+	    overflow: hidden;
 		li{
 
-			display: inline;
-			list-style-type: none;
-			padding: 16px;
-			color: white;
-			background-color: blue;
-			cursor:pointer;
+		    list-style-type: none;
+		    background-color: blue;
+		    
+		    float: left;
+		    padding: 14px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    border-right: 1px solid white;
+			a{
+				text-decoration:none;
+				color:white; 
+				cursor: pointer;
+			}
 		}
 	}
 }
