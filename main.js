@@ -42,10 +42,30 @@ app.config(function($stateProvider, $urlRouterProvider){
 })
 
 
-app.controller('RecipeController',function($scope, $firebaseArray, toaster){
-	var ref = new Firebase("https://cena-navidad.firebaseio.com");
+app.controller('RecipeController',function($scope, $firebaseArray, toaster, $window){
+  var DB = "https://cena-navidaddev.firebaseio.com/";
+  //var DB = "https://cena-navidad.firebaseio.com";
+	var ref = new Firebase(DB);
+  var ref2 = new Firebase(DB+"/-K4JNuzA18_ED-mFIX7U");
   // download the data into a local object
   $scope.data = $firebaseArray(ref);
+
+  console.log($scope.data);
+
+  $scope.test = $firebaseArray(ref2);
+
+
+  $scope.removeDish = function (dish,name){
+    var ref_dish = new Firebase(DB + '/'+dish);
+    var deleteDish = $window.confirm('Estas seguro que deseas borrar '+name+'?');
+    if (deleteDish){
+      ref_dish.remove();
+      toaster.pop('success', "El plato "+name+" ha sido borrado ", "Gracias");
+    }
+    
+  }
+
+
 
   $scope.addRecipe = function() {
     $scope.data.$add({

@@ -1,3 +1,4 @@
+<toaster-container></toaster-container>
 <div class="container">
 	<h2 class="title-list">CENA</h2>
 	<h3 class="title-order">Primeros / Entrantes</h3>
@@ -8,6 +9,7 @@
 			<span class="container-list-dish">{{ item.name }}</span>
 			<span class="container-list-text">Tipo de Plato</span>
 			<span class="container-list-dish">{{ item.type }}</span>
+			<i class="fa fa-remove " ng-click="removeDish(item.$id,item.dish)"></i>
 		</li>
 	</ul>
 	<h3 class="title-order">Segundos</h3>
@@ -18,6 +20,7 @@
 			<span class="container-list-dish">{{ item.name }}</span>
 			<span class="container-list-text">Tipo de Plato</span>
 			<span class="container-list-dish">{{ item.type }}</span>
+			<i class="fa fa-remove " ng-click="removeDish(item.$id,item.dish)"></i>
 		</li>
 	</ul>
 	<h3 class="title-order">Postres</h3>
@@ -28,6 +31,18 @@
 			<span class="container-list-dish">{{ item.name }}</span>
 			<span class="container-list-text">Tipo de Plato</span>
 			<span class="container-list-dish">{{ item.type }}</span>
+			<i class="fa fa-remove " ng-click="removeDish(item.$id,item.dish)"></i>
+		</li>
+	</ul>
+	<h3 class="title-order">Bebidas</h3>
+	<ul>
+		<li class="container-list" ng-repeat="item in data" ng-if="item.date==24 && item.order == 4" >
+			<span class="container-list-dish">{{ item.dish }}</span>
+			<span class="container-list-text">cortesía de </span>
+			<span class="container-list-dish">{{ item.name }}</span>
+			<span class="container-list-text">Tipo de Plato</span>
+			<span class="container-list-dish">{{ item.type }}</span>
+			<i class="fa fa-remove " ng-click="removeDish(item.$id,item.dish)"></i>
 		</li>
 	</ul>
 </div>
